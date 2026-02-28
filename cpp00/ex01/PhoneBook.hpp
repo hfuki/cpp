@@ -10,14 +10,13 @@ private:
 	int		next;
 
 	static std::string format10(const std::string& s);
-	static bool isAllDigits(const std::string& s);
 
 public:
 	PhoneBook();
 
 	void addContact(const Contact& c);
 	void printTable() const;
-	void printDetailByIndex(int index);
+	void printDetailByIndex(int index) const;
 
 	int	getCount() const;
 };
