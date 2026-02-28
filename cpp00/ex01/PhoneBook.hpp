@@ -18,7 +18,8 @@ public:
 	void addContact(const Contact& c);
 	void printTable() const;
 	void printDetailByIndex(int index);
-};
 
+	int	getCount() const;
+};
 
 #endif
