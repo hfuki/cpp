@@ -2,6 +2,7 @@
 #include "Contact.hpp"
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 
 static bool readNonEmptyLine(const std::string& prompt, std::string& out)
