@@ -42,13 +42,9 @@ int	main(int ac, char ** av)
 	}
 
 	std::string content;
-	std::string line;
-	while (std::getline(input_file, line))
-	{
-		content += line;
-		if (!input_file.eof())
-			content += "\n";
-	}
+	char ch;
+	while (input_file.get(ch))
+	        content += ch;
 	input_file.close();
 
 	std::string modified_content = replace_string(content, s1, s2);

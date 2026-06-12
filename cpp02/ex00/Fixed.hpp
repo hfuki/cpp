@@ -15,7 +15,8 @@ public:
 	Fixed& operator = (const Fixed& other);
 	~Fixed();
 
-	int	getRawBits() const;
-};
+	int     getRawBits() const;
+	void    setRawBits(int const raw);
+	};
 
 #endif

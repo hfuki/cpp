@@ -7,41 +7,36 @@
 
 int main()
 {
-	std::cout << "----Correct----";
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+        std::cout << "---- Subject Array Test ----\n";
+        const int N = 4;
+        Animal* animals[N];
 
-	std::cout << j->getType() << "\n";
-	std::cout << i->getType() << "\n";
+        for (int i = 0; i < N / 2; i++)
+                animals[i] = new Dog();
+        for (int i = N / 2; i < N; i++)
+                animals[i] = new Cat();
 
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
+        for (int i = 0; i < N; i++)
+                delete animals[i];
 
-	delete meta;
-	delete j;
-	delete i;
+        std::cout << "\n---- Deep Copy Test ----\n";
+        Dog basic;
+        {
+                Dog tmp = basic;
+        } // tmp goes out of scope, basic's brain should remain valid
 
-	std::cout << "----Wrong----";
-	const WrongAnimal* wa = new WrongAnimal();
-	const WrongAnimal* wc = new WrongCat();
+        std::cout << "\n---- Detailed Brain Copy Test ----\n";
+        Dog* dogA = new Dog();
+        dogA->getBrain()->setIdea(0, "I want a bone");
 
-	std::cout << wa->getType() << "\n";
-	std::cout << wc->getType() << "\n";
+        Dog* dogB = new Dog(*dogA);
+        dogA->getBrain()->setIdea(0, "I want a ball");
 
-	wa->makeSound();
-	wc->makeSound();
+        std::cout << "Dog A idea 0: " << dogA->getBrain()->getIdea(0) << std::endl;
+        std::cout << "Dog B idea 0: " << dogB->getBrain()->getIdea(0) << std::endl;
 
-	delete wa;
-	delete wc;
+        delete dogA;
+        delete dogB;
 
-	std::cout << "----Brain----";
-	Brain a;
-	a.setIdea(0, "hello");
-
-	Brain b(a);
-	a.setIdea(0, "changed");
-
-	std::cout << b.getIdea(0) << "\n"; 
+        return 0;
 }

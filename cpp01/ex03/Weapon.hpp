@@ -10,7 +10,7 @@ private:
 public:
 	Weapon();
 
-	const std::string&	getType();
+	const std::string&      getType() const;
 	void	setType(const std::string& n_type);
 };
 

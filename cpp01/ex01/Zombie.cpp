@@ -3,12 +3,17 @@
 
 Zombie::Zombie() : name(""){}
 
-void	Zombie::set(const std::string& new_name)
+Zombie::~Zombie()
 {
-	name = new_name;
+        std::cout << name << " is destroyed" << std::endl;
 }
 
-void	Zombie::announce()
+void    Zombie::setName(std::string new_name)
 {
-	std::cout << name << std::endl;
+        name = new_name;
+}
+
+void    Zombie::announce()
+{
+        std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

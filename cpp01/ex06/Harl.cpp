@@ -2,41 +2,38 @@
 
 Harl::Harl(){}
 
-void	Harl::complain(std::string level)
+void    Harl::complain(std::string level)
 {
-	void	(Harl::*f[])(void) =
-	{
-		&Harl::debug_comp,
-		&Harl::info_comp,
-		&Harl::warning_comp,
-		&Harl::error_comp
-	};
+        void    (Harl::*f[])(void) =
+        {
+                &Harl::debug_comp,
+                &Harl::info_comp,
+                &Harl::warning_comp,
+                &Harl::error_comp
+        };
 
-	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	for (int i = 0; i < 4; i++)
-	{
-		if (level == levels[i])
-		{
-			switch (i)
-			{
-				case 0:
-					(this->*f[0])();
-					//fallthrough
-				case 1:
-					(this->*f[1])();
-					//fallthrough
-				case 2:
-					(this->*f[2])();
-					//fallthrough
-				case 3:
-					(this->*f[3])();
-					break;
-				default:
-					std::cerr << "Error" << std::endl;
-			}
-			return ;
-		}
-	}
+        std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+        int i;
+        for (i = 0; i < 4; i++)
+        {
+                if (level == levels[i])
+                        break;
+        }
+
+        switch (i)
+        {
+                case 0:
+                        (this->*f[0])();
+                case 1:
+                        (this->*f[1])();
+                case 2:
+                        (this->*f[2])();
+                case 3:
+                        (this->*f[3])();
+                        break;
+                default:
+                        std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+        }
 }
 
 void	Harl::debug_comp()
