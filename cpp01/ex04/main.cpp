@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 
 std::string replace_string(std::string content, const std::string& s1, const std::string& s2)
 {
@@ -41,10 +42,9 @@ int	main(int ac, char ** av)
 		return (1);
 	}
 
-	std::string content;
-	char ch;
-	while (input_file.get(ch))
-	        content += ch;
+	std::stringstream ss;
+	ss << input_file.rdbuf();
+	std::string content = ss.str();
 	input_file.close();
 
 	std::string modified_content = replace_string(content, s1, s2);
