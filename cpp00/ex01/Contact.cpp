@@ -2,7 +2,7 @@
 
 Contact::Contact()
 	: firstName(""), lastName(""), nickName(""), phoneNumber(""), darkestSecret("")
-{};
+{}
 
 void	Contact::set(
 				const std::string& fn,

@@ -32,7 +32,7 @@ void	Harl::debug_comp()
 
 void	Harl::info_comp()
 {
-	std::cout << "I cannot believe adding extra bacon costs more money." 
+	std::cout << "I cannot believe adding extra bacon costs more money."
 			  << " You didn't put enough bacon in my burger! If you did,"
 			  <<" I wouldn't be asking for more!" << std::endl;
 }

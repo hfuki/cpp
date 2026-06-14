@@ -4,7 +4,7 @@ ClapTrap::ClapTrap(void)
 	: name(""), hitPoints(10), energyPoints(10), attackDamage(0)
 {
 	std::cout << "ClapTrap default constructor called\n";
-} 
+}
 
 ClapTrap::ClapTrap(const std::string& name)
 	: name(name), hitPoints(10), energyPoints(10), attackDamage(0)
@@ -63,7 +63,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		hitPoints = 0;
 	else
 		hitPoints -= amount;
-	
+
 	std::cout << "ClapTrap " << name << " takes " << amount
 		<< " damage, hit points now " << hitPoints << "\n";
 }

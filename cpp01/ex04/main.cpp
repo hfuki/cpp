@@ -7,7 +7,7 @@ std::string replace_string(std::string content, const std::string& s1, const std
 {
 	if (s1.empty())
 		return content;
-	
+
 	std::string result;
 	int	pos = 0;
 	std::string::size_type	found_pos;

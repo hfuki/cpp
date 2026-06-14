@@ -1,6 +1,6 @@
 NAME = animal
 CXX = c++
-CFLGS = -Wall -Wextra -Werror -std=c++98
+CFLGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRCS = Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
@@ -13,7 +13,7 @@ $(NAME) : $(OBJS)
 %.o : %.cpp
 	$(CXX) $(CFLGS) -c $< -o $@
 
-clean : 
+clean :
 	rm -rf $(OBJS)
 
 fclean : clean

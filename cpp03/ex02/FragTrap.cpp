@@ -41,4 +41,3 @@ void	FragTrap::highFivesGuys()
 {
 	std::cout << "FragTrap " << name << " requests a high five!\n";
 }
-

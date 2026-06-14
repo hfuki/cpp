@@ -1,6 +1,6 @@
 NAME = fixed_point
 CXX = c++
-FLGS = -Wall -Werror -Wextra -std=c++98
+FLGS = -Wall -Werror -Wextra -std=c++98 -pedantic
 
 SRCS = main.cpp Fixed.cpp
 OBJS = $(SRCS:.cpp=.o)

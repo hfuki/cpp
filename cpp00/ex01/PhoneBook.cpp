@@ -55,9 +55,9 @@ void	PhoneBook::printDetailByIndex(int index) const
 	}
 
 	const Contact& c = contacts[index];
-	std::cout << "First name:" << c.getFirstName() << std::endl;	
+	std::cout << "First name:" << c.getFirstName() << std::endl;
 	std::cout << "Last name:" << c.getLastName() << std::endl;
-	std::cout << "Nickname:" << c.getNickName() << std::endl;	
+	std::cout << "Nickname:" << c.getNickName() << std::endl;
 	std::cout << "Phone number:" << c.getPhoneNumber() << std::endl;
 	std::cout << "Darkest secret:" << c.getDarkestSecret() << std::endl;
 }

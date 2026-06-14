@@ -11,7 +11,7 @@ public:
 	WrongCat& operator=(const WrongCat& other);
 	~WrongCat(void);
 
-	void makeSound(void) const; 
+	void makeSound(void) const;
 };
 
 #endif

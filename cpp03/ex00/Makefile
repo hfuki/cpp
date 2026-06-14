@@ -1,6 +1,6 @@
 NAME = claptrap
 CXX = c++
-CFLGS = -Wall -Wextra -Werror -std=c++98
+CFLGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRCS = main.cpp ClapTrap.cpp
 OBJS = $(SRCS:.cpp=.o)

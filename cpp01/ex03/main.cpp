@@ -26,5 +26,4 @@ int	main()
 	B.attack();
 
 	return (0);
-
 }

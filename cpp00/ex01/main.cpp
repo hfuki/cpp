@@ -15,7 +15,7 @@ static bool readNonEmptyLine(const std::string& prompt, std::string& out)
 
 		if (!out.empty())
 			return true;
-		
+
 		std::cout << "Field cannot be empty. Try again." << std::endl;
 	}
 }
@@ -93,4 +93,3 @@ int	main()
 	}
 	return 0;
 }
-

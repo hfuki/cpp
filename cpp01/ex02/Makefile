@@ -1,6 +1,6 @@
 NAME = ref
 CXX = c++
-FLGS = -Wall -Werror -Wextra -std=c++98
+FLGS = -Wall -Werror -Wextra -std=c++98 -pedantic
 
 SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
@@ -13,7 +13,7 @@ $(NAME) : $(OBJS)
 %.o : %.cpp
 	$(CXX) $(FLGS) -c $< -o $@
 
-clean : 
+clean :
 	rm -rf $(OBJS)
 
 fclean : clean

@@ -12,7 +12,6 @@ public:
 	HumanA(const std::string& name, Weapon& weapon);
 
 	void	attack();
-}; 
-
+};
 
 #endif
